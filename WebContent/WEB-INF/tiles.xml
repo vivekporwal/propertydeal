@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+	<!-- defining general master -->
+	<definition name="headerfooter.definition" template="/WEB-INF/jsp/headerfooter_master.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	
+	<!-- defining loggedin master -->
+	<definition name="loggedin.definition" template="/WEB-INF/jsp/loggedin_master.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/loggedin_header.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	<!-- defining loggedin master -->
+	
+	<definition name="brokerhome.definition" template="/WEB-INF/jsp/loggedin_master.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/loggedin_header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/brokermenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	<definition name="individualhome.definition" template="/WEB-INF/jsp/loggedin_master.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/loggedin_header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/individualmenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	<definition name="builderhome.definition" template="/WEB-INF/jsp/loggedin_master.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/loggedin_header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/buildermenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	
+	<definition name="withoutmenu.definition" template="/WEB-INF/jsp/withoutmenu_master.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/loggedin_header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	
+	<definition name="loggedout.definition" template="/WEB-INF/jsp/loggedout_master.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	<!-- login page in tiles  -->
+	<definition name="login" extends="headerfooter.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
+	</definition> 
+	 
+	<!-- Register page in tiles -->
+	<definition name="register" extends="headerfooter.definition">
+		<put-attribute name="title" value="Register" />
+		<put-attribute name="body" value="/WEB-INF/pages/register.jsp" />
+	</definition>
+	 
+	<definition name="usercreated" extends="headerfooter.definition">
+		<put-attribute name="title" value="UserCreated" />
+		<put-attribute name="body" value="/WEB-INF/pages/usercreated.jsp" />
+	</definition> 
+		
+	<definition name="contacts" extends="headerfooter.definition">
+		<put-attribute name="title" value="Contacts" />
+		<put-attribute name="body" value="/WEB-INF/pages/contacts.jsp" />
+	</definition> 
+	
+	<definition name="details" extends="headerfooter.definition">
+		<put-attribute name="title" value="Details" />
+		<put-attribute name="body" value="/WEB-INF/pages/details.jsp" />
+	</definition> 
+	
+	<definition name="postproperty" extends="withoutmenu.definition">
+		<put-attribute name="title" value="PostProperty" />
+		<put-attribute name="body" value="/WEB-INF/pages/postproperty.jsp" />
+	</definition>
+	 
+	<definition name="postrequirement" extends="withoutmenu.definition">
+		<put-attribute name="title" value="PostRequirement" />
+		<put-attribute name="body" value="/WEB-INF/pages/postrequirement.jsp" />
+	</definition>
+	
+	<definition name="allrequirements" extends="withoutmenu.definition">
+		<put-attribute name="title" value="AllRequirement" />
+		<put-attribute name="body" value="/WEB-INF/pages/allrequirements.jsp" />
+	</definition>
+	
+	<definition name="allproperties" extends="withoutmenu.definition">
+		<put-attribute name="title" value="AllProperties" />
+		<put-attribute name="body" value="/WEB-INF/pages/allproperties.jsp" />
+	</definition>
+	
+	<definition name="showusers" extends="loggedin.definition">
+		<put-attribute name="title" value="showallusers" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/adminmenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/showusers.jsp" />
+	</definition>
+	<definition name="updatebrokerprofile" extends="brokerhome.definition">
+		<put-attribute name="title" value="Edit Profile" />		
+		<put-attribute name="body" value="/WEB-INF/pages/updatebrokerprofile.jsp" />
+	</definition>
+	<definition name="updatebuilderprofile" extends="builderhome.definition">
+		<put-attribute name="title" value="Edit Profile" />		
+		<put-attribute name="body" value="/WEB-INF/pages/updatebuilderprofile.jsp" />
+	</definition>
+	<definition name="updateindividualprofile" extends="individualhome.definition">
+		<put-attribute name="title" value="Edit Profile" />		
+		<put-attribute name="body" value="/WEB-INF/pages/updateindividualprofile.jsp" />
+	</definition>
+		
+	<definition name="updateprop" extends="withoutmenu.definition">
+		<put-attribute name="title" value="TakePid" />
+		<put-attribute name="body" value="/WEB-INF/pages/updateprop.jsp" />
+	</definition>
+	
+	<definition name="updateproperty" extends="withoutmenu.definition">
+		<put-attribute name="title" value="UpdateProp" />
+		<put-attribute name="body" value="/WEB-INF/pages/updateproperty.jsp" />
+	</definition>
+	
+	<definition name="updatedprop" extends="withoutmenu.definition">
+		<put-attribute name="title" value="UpdatedProp" />
+		<put-attribute name="body" value="/WEB-INF/pages/updatedprop.jsp" />
+	</definition>
+	<definition name="updatereq" extends="withoutmenu.definition">
+		<put-attribute name="title" value="TakePropID" />
+		<put-attribute name="body" value="/WEB-INF/pages/updatereq.jsp" />
+	</definition>
+	<definition name="updaterequirement" extends="withoutmenu.definition">
+		<put-attribute name="title" value="UpdateProp" />
+		<put-attribute name="body" value="/WEB-INF/pages/updaterequirement.jsp" />
+	</definition>
+	<definition name="updatedreq" extends="withoutmenu.definition">
+		<put-attribute name="title" value="UpdatedReq" />
+		<put-attribute name="body" value="/WEB-INF/pages/updatedreq.jsp" />
+	</definition>
+	
+	<definition name="search" extends="headerfooter.definition">
+		<put-attribute name="title" value="SearchProperty" />
+		<put-attribute name="body" value="/WEB-INF/pages/search.jsp" />
+	</definition>
+	  
+	<!-- logout page in tiles  -->
+	<definition name="logout" extends="loggedout.definition">
+		<put-attribute name="title" value="Logout" />
+		<put-attribute name="body" value="/WEB-INF/pages/logout.jsp" />
+	</definition>
+	
+	<definition name="individualhomepage" extends="loggedin.definition">
+		<put-attribute name="title" value="IndividualUserHome" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/individualmenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/individualhomepage.jsp" />
+	</definition>
+	 
+	<definition name="brokerhomepage" extends="loggedin.definition">
+		<put-attribute name="title" value="BrokerUserHome" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/brokermenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/brokerhomepage.jsp" />
+	</definition> 
+	
+	<definition name="builderhomepage" extends="loggedin.definition">
+		<put-attribute name="title" value="BuilderUserHome" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/buildermenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/builderhomepage.jsp" />
+	</definition>
+	 
+	<definition name="adminhomepage" extends="loggedin.definition">
+		<put-attribute name="title" value="AdminUserHome" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/adminmenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/adminhomepage.jsp" />
+	</definition> 
+	 
+	<definition name="propertyposted" extends="withoutmenu.definition">
+		<put-attribute name="title" value="PropertyPosted" />
+		<put-attribute name="body" value="/WEB-INF/pages/propertyposted.jsp" />
+	</definition>
+	
+	<definition name="builderdetailsupdated" extends="loggedin.definition">
+		<put-attribute name="title" value="Details Updated" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/buildermenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/builderdetailsupdated.jsp" />
+	</definition>
+	<definition name="brokerdetailsupdated" extends="loggedin.definition">
+		<put-attribute name="title" value="Details Updated" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/brokermenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/brokerdetailsupdated.jsp" />
+	</definition>
+	<definition name="individualdetailsupdated" extends="loggedin.definition">
+		<put-attribute name="title" value="Details Updated" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/individualmenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/individualdetailsupdated.jsp" />
+	</definition>
+	 
+	<definition name="requirementposted" extends="withoutmenu.definition">
+		<put-attribute name="title" value="RequirementPosted" />
+		<put-attribute name="body" value="/WEB-INF/pages/requirementposted.jsp" />
+	</definition>
+	
+	<definition name="searchedprops" extends="headerfooter.definition">
+		<put-attribute name="title" value="Propertysearched" />
+		<put-attribute name="body" value="/WEB-INF/pages/searchedprops.jsp" />
+	</definition>
+	
+	<definition name="usersearchedprop" extends="withoutmenu.definition">
+		<put-attribute name="title" value="Propertysearched" />
+		<put-attribute name="body" value="/WEB-INF/pages/usersearchedprop.jsp" />
+	</definition>
+	
+	<definition name="changepassword" extends = "withoutmenu.definition">
+		<put-attribute name = "title" value = "Change Password"/>
+		<put-attribute name ="body" value = "/WEB-INF/pages/changepassword.jsp"/>
+	</definition> 
+	
+	<definition name="passwordchanged" extends = "loggedout.definition">
+		<put-attribute name = "title" value = "Password Changed"/>
+		<put-attribute name ="body" value = "/WEB-INF/pages/passwordchanged.jsp"/>
+	</definition> 
+	
+	<definition name="usersearch" extends = "withoutmenu.definition">
+		<put-attribute name = "title" value = "Search Properties"/>
+		<put-attribute name ="body" value = "/WEB-INF/pages/usersearch.jsp"/>
+	</definition> 
+	
+	
+</tiles-definitions>
